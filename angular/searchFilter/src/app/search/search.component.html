@@ -1,0 +1,18 @@
+<section class="filter-wrapper">
+    <div class="keyword-wrapper">
+   <input type="text" id='keyword' placeholder='search'  (input)="searchPosts($event.target.value)"/>
+     </div>
+   <ul class="filter-select" *ngIf="(posts$| async) as posts">
+   <!-- <ul class="filter-select" >  -->
+     <!-- <li *ngFor="let post of posts | async" class="filter-select-list" > -->
+     <li  class="filter-select-list" >
+       <p class="artist-name" >
+         {{posts.name}}
+       </p>
+     </li>
+     <li *ngFor ='let item of items'>
+       {{item.name}}
+     </li>
+   <span class="tags"></span>
+   </ul>
+</section>
